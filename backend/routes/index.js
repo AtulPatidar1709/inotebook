@@ -5,6 +5,11 @@ connectToMongo();
 const app = express()
 const port = 3000
 
+// avilable routes
+
+app.get('/api/auth', require('./routes/auth'))
+app.get('/api/notes', require('./routes/notes'))
+
 app.get('/', (req, res) => {
     res.send('Jai Shree Ram')
 })
